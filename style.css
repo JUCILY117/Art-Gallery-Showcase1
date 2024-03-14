@@ -176,7 +176,6 @@ svg text.text-body{
         stroke-dasharray: 55px 10%;
     }
 }
-
 nav .nav-items {
     display: flex;
     align-items: center;
@@ -193,9 +192,6 @@ nav .nav-items .indexnav{
     margin-right: 230px;
 }
 
-#menu-btn, #close-btn{
-    display: none;
-}
 .logUser{
     color: #171574;
     font-weight: 800;
@@ -657,6 +653,10 @@ nav .nav-items i {
 
 
 @media (max-width:450px) {
+    .side1 .move h5 {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
     #page-1 .left .side .move h5 {
         font-size: 5vw;
     }
@@ -678,7 +678,6 @@ nav .nav-items i {
         display: block;
         font-size: 7vw;
     }
-
     .hero{
         display: flex;
         flex-direction: column;
@@ -708,7 +707,7 @@ nav .nav-items i {
         height: 55%;
         position: relative;
         z-index: 1000;
-        transform: translate(-14.2rem, 10rem);
+        transform: translate(-14.8rem, 10rem);
     }
 
     .hero .pg1-txt{
@@ -768,7 +767,7 @@ nav .nav-items i {
 
     .pg2-txt{
         order: 2;
-        margin-top: -20rem;
+        margin-top: -10rem;
         height: 60%;
     }
     .stripes-2, .overlay-2{
@@ -789,8 +788,8 @@ nav .nav-items i {
         margin-top: 3rem;
         width: 100%;
         mask-size: 150% 110%;
-        mask-position: -130px -40px;
-        object-position: 10px -80px;
+        mask-position: -130px 30px;
+        object-position: 10px -30px;
     }
 
     .pg3-txt{
