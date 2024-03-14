@@ -1,0 +1,493 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+        "Helvetica Neue",
+        Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #211922;
+}
+
+body {
+  margin-top: 10vh;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #1e1e1e; */
+    background: url('https://img.freepik.com/premium-photo/white-background-with-blue-background-word-white-it_207225-64.jpg?w=2000');
+    /* overflow: hidden; */
+}
+
+
+body,
+div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* .card {
+	width: 236px;
+	height: 472px;
+	border-radius: 16px;
+	position: relative;
+
+	background-color: green;
+	overflow: hidden;
+} */
+
+.pin_title {
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+}
+
+.pin_modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+
+.pin_modal:hover {
+	opacity: 1;
+}
+
+.pin_modal .modal_head {
+	width: 100%;
+	height: 15%;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.pin_modal .modal_head .save_card {
+	margin-right: 20px;
+	width: 53px;
+	height: 40px;
+	border-radius: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 14px;
+	font-weight: 700;
+
+	color: white;
+	background-color: #ff0000;
+	cursor: pointer;
+}
+
+.pin_modal .modal_foot {
+	width: 100%;
+	height: 15%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.pint_mock_icon_container {
+	/* width: 32px;
+	height: 32px; */
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+
+.pint_mock_icon {
+	width: 50%;
+}
+
+.pin_modal .modal_foot .destination {
+	/* width: 132px;
+	height: 32px; */
+	border-radius: 18px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	font-size: 16px;
+	font-weight: 700;
+
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+.modal_foot .pint_mock_icon_container {
+  width: 32px;
+  height: 32px;
+}
+
+.modal_foot .destination {
+  width: 132px;
+  height: 32px;
+}
+.pin_modal .modal_foot .destination span {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.pin_image {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pin_image img {
+	max-height: 100%;
+}
+
+.add_pin_modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .add_pin_container {
+    padding: 35px;
+    width: 880px;
+    height: 674px;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: flex;
+  
+    background-color: #ffffff;
+  }
+  
+  .side {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+  }
+  
+  
+  .pint_mock_icon_container {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .pint_mock_icon {
+    width: 50%;
+  }
+  
+  .section1 {
+    width: 100%;
+    height: 8%;
+  
+    /* background-color: purple; */
+  }
+  
+  .section2 {
+    padding: 0px 10px;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* background-color: aquamarine; */
+  }
+  
+  .section3 {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* background-color: firebrick; */
+  }
+  
+  #left_side .section1 .pint_mock_icon_container {
+    width: 40px;
+    height: 40px;
+  
+    background-color: rgba(239, 239, 239, 0);
+    transition-duration: 0.3s;
+  }
+  
+  #left_side .section1 .pint_mock_icon_container:hover {
+    background-color: rgba(239, 239, 239, 1);
+  }
+  
+  #left_side .section2 #upload_img_label {
+    width: 100%;
+    height: 100%;
+  
+    cursor: pointer;
+  }
+  
+  #left_side .section2 #upload_img_label input {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  
+  #left_side .section2 #upload_img_label .upload_img_container {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  
+    background-color: #efefef;
+  }
+  
+  #left_side .section2 #upload_img_label .upload_img_container #dotted_border {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px dashed #dadada;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #left_side .section2 .pint_mock_icon_container {
+    background-color: #767676;
+  }
+  
+  #left_side .section3 .save_from_site {
+    width: 95%;
+    height: 5vh;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-weight: 700;
+  
+    background-color: #efefef;
+  }
+  
+  .modals_pin {
+    width: 252px;
+    height: 512px;
+    border-radius: 16px;
+    position: relative;
+    display: none;
+    opacity: 0;
+  
+    overflow: hidden;
+  }
+  
+  .pin_image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .pin_image img {
+    max-height: 100%;
+  }
+   */
+  .pin_max_width {
+    max-width: 100%;
+  }
+  
+  .pin_max_height {
+    max-height: 100%;
+  }
+  
+  #right_side .section1 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #right_side .section1 .select_size{
+    width: 236px;
+    height: 40px;
+    display: flex;
+  }
+  
+  #right_side .section1 .select_size select{
+    width: 70%;
+    height: 100%;
+    border:none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+  
+    font-size: 16px;
+  
+    background-color: #EFEFEF;
+  }
+  
+  #right_side .section1 .select_size .save_pin{
+    width: 30%;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-weight: 700;
+  
+    color: white;
+    background-color: #E60023;
+    cursor: pointer;
+  }
+  
+  #right_side .section2 .new_pin_input {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid #C6C6C6;
+    outline: none;
+  
+    font-size: 16px;
+  
+    background-color: transparent;
+  }
+
+  :root {
+    --card_width: 250px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+  }
+  
+  .navigation_bar {
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    top: 0;
+  }
+  
+  .navigation_bar .add_pin {
+    width: 10vh;
+    height: 10vh;
+    position: relative;
+    top: 83vh;
+    left: 48%;  
+    transition-duration: 0.3s;
+  }
+  
+  .navigation_bar .add_pin:hover {
+    background-color: #767676;
+    transform: scale(1.2);
+  }
+  
+  .add_pin_modal {
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.5s;
+  }
+  
+  .pin_container {
+    margin-top: 120px;
+    padding: 0;
+    width: 80vw;
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+  }
+  
+  .card {
+    padding: 0;
+    margin: 15px 10px;
+    position: relative;
+    border-radius: var(--card_border_radius);
+    overflow: hidden;
+  }
+  .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card_small {
+    grid-row-end: span var(--card_small);
+  }
+  
+  .card_medium {
+    grid-row-end: span var(--card_medium);
+  }
+  
+  .card_large {
+    grid-row-end: span var(--card_large);
+  }
+  
+  .delete_all_pins {
+    display: flex;
+    position: fixed;
+    color: #ffffff;
+    cursor: pointer;
+    width: 250px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    font-size: 16px;
+    font-weight: 700;
+    background: red;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2.5rem;
+    left: 91%;
+    top: 93%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(100%);
+    opacity: 0;
+    border-radius: 25px;
+  }
+  
+  .delete_all_pins::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: red;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.delete_all_pins.show-delete-button {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.delete_all_pins:hover::before {
+    background: rgb(124, 52, 52); /* Change the background color on hover */
+}
+
